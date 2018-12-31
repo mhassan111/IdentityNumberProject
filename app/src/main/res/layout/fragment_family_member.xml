@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:scrollbars="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/infoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteColor"
+            android:paddingBottom="20dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/usericon" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:gravity="start|bottom"
+                    android:text="Your Mother"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/relevantInfoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@+id/profile_image"
+                    android:gravity="start"
+                    android:text="@string/relevant_information"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/firstNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext_border_background"
+                android:gravity="center"
+                android:padding="5dp"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/headerLayout">
+
+                <EditText
+                    android:id="@+id/firstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="First Name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lastNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_border_background"
+                android:gravity="center"
+                android:padding="5dp"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/firstNameEditText">
+
+                <EditText
+                    android:id="@+id/lastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="Last Name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/dateOfBirthEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_border_background"
+                android:gravity="center"
+                android:padding="5dp"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/lastNameEditText">
+
+                <EditText
+                    android:id="@+id/dateOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/calender"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Date Of Birth"
+                    android:inputType="date"
+                    android:longClickable="false"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/countryEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_border_background"
+                android:gravity="center"
+                android:padding="5dp"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/dateOfBirthEditText">
+
+                <AutoCompleteTextView
+                    android:id="@+id/country"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="Country Of Birth"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <RadioGroup
+                android:id="@+id/radioLiving"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/countryEditText">
+
+                <RadioButton
+                    android:id="@+id/living"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="@drawable/edittext_border_background"
+                    android:button="@drawable/radiobtn_selected"
+                    android:checked="true"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp"
+                    android:gravity="start|center_vertical"
+                    android:text="Living"
+                    android:textColor="@color/darkTextColor"
+                    android:textSize="17sp" />
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/yearOfDeathEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_border_background"
+                android:gravity="center"
+                android:padding="5dp"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/radioLiving">
+
+                <EditText
+                    android:id="@+id/yearOfDeath"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/calender"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Year Of Death"
+                    android:inputType="date"
+                    android:longClickable="false"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_background"
+                android:drawableStart="@color/blueColor"
+                android:padding="10dp"
+                android:text="Next"
+                android:textColor="@color/whiteColor"
+                app:layout_constraintTop_toBottomOf="@+id/yearOfDeathEditText" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

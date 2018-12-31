@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group android:checkableBehavior="single" android:id="@+id/slidingMenu">
+        <item
+            android:id="@+id/familyTree"
+            android:title="My Family Tree"
+            android:checked="true"
+            android:icon="@drawable/family_tree"/>
+
+        <item
+            android:id="@+id/research"
+            android:title="Research"
+            android:checked="false"
+            android:icon="@drawable/research"/>
+
+        <item
+            android:id="@+id/discoveries"
+            android:title="Discoveries"
+            android:checked="false"
+            android:icon="@drawable/discoveries"/>
+
+        <item
+            android:id="@+id/photos"
+            android:title="My Photos"
+            android:checked="false"
+            android:icon="@drawable/photos"/>
+        <item
+            android:id="@+id/memories"
+            android:title="Memories"
+            android:checked="false"
+            android:icon="@drawable/memories"/>
+        <item
+            android:id="@+id/family"
+            android:title="My Family"
+            android:checked="false"
+            android:icon="@drawable/family_finder"/>
+
+        <item
+            android:id="@+id/chat"
+            android:title="Chat"
+            android:checked="false"
+            android:icon="@drawable/family_finder"/>
+    </group>
+
+</menu>

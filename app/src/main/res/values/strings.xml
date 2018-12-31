@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">IdentityNumber</string>
+    <string name="splash_footer">© identitynumber.org 2018</string>
+    <string name="instruction_text">Prevent yourself from falling victim to fraud &amp; scams and trace your ancestors online!</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="password_reset_string">A password reset link will be sent to provided email address</string>
+    <string name="relevant_information">Please enter relevant information to best of your ability</string>
+    <string name="forget_password"><u>Forget Password?</u></string>
+    <string name="sign_up_text">Don\'t have an account yet? Sign up.</string>
+    <string name="identity_verification">Please complete the fields below to conduct an Identity Verification. Please ensure that you enter a   valid 13-Digit South African Identity Number and exact full names and surname</string>
+
+    <string name="fa_menu_icon">&#xf0c9;</string>
+</resources>

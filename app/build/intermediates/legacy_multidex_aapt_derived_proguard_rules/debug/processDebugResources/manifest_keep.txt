@@ -1,0 +1,2 @@
+# Referenced at F:\INRepo\IdentityNumber\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:18
+-keep class com.identitynumber.app.MyApplication { <init>(...); }

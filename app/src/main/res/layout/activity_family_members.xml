@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar">
+        </include>
+
+    </LinearLayout>
+
+    <com.github.vivchar.viewpagerindicator.ViewPagerIndicator
+        android:id="@+id/view_pager_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_vertical"
+        android:paddingTop="15dp"
+        app:delimiterSize="17dp"
+        app:itemScale="1"
+        app:itemSelectedTint="@color/blueColor"
+        app:itemSize="22dp"
+        app:itemTint="@color/grayColor" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_pager_indicator"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:paddingBottom="12dp"
+        android:paddingTop="0dp"/>
+
+</RelativeLayout>

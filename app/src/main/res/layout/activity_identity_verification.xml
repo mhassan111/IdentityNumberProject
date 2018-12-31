@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:scrollbars="vertical">
+
+    <FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"></include>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:paddingBottom="20dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="25dp">
+
+                <TextView
+                    android:id="@+id/identityVerification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/identity_verification"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/IDText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/identityVerification"
+                    android:layout_marginTop="18dp"
+                    android:text="Identity Number"
+                    android:textSize="18sp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/identityNumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/IDText"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_border_background"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    app:errorEnabled="true"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/identityNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="Enter identity number"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="8dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/fullNameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/identityNumberEditText"
+                    android:layout_marginTop="18dp"
+                    android:text="Exact Full Name"
+                    android:textSize="18sp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/fullNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/fullNameText"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_border_background"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    app:errorEnabled="true"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/fullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="Enter full name"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="8dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/surNameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fullNameEditText"
+                    android:layout_marginTop="18dp"
+                    android:text="Exact Sur Name"
+                    android:textSize="18sp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/surNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/surNameText"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_border_background"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    app:errorEnabled="true"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/surName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="Enter surname"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingStart="8dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/verifyIdentity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/surNameEditText"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/button_background"
+                    android:paddingBottom="1dp"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="1dp"
+                    android:text="Verify Identity"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</ScrollView>
